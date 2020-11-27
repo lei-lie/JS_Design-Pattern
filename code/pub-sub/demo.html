@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>观察者模式-买书模型</title>
+</head>
+<body>
+    <div id="app"></div>
+    <!-- <script>
+        // 发布者
+        const BookShop = {
+            contactList:[],//书店的电话簿
+            addContact(customer) {
+                if (!this.contactList.includes(customer)) {}
+                this.contactList.push(customer)
+            },
+            // 通知买家来买书
+            notify() {
+                this.contactList.map(customer => customer.update())
+            },
+            // 取消订阅
+            unSub(customer) {
+                if (!this.contactList.includes(customer)) {return}
+                let index = this.contactList.findIndex(item => item === customer)
+                this.contactList.splice(index,1)
+            }
+        }
+        // 小白--订阅者
+        const XiaoBai = {
+            phone: 13265478965,
+            update() {
+                console.log('小白接到书店通知：到书店买参考资料');
+            }
+        }
+         // 小明--订阅者
+         const XiaoMing = {
+            phone: 13265478965,
+            update() {
+                console.log('小明接到书店通知：到书店买参考资料');
+            }
+        }
+        // 测试
+        BookShop.addContact(XiaoBai)
+        BookShop.addContact(XiaoMing)
+        BookShop.notify()
+        setTimeout(function() {
+            BookShop.unSub(XiaoMing)
+            console.log(BookShop.contactList);
+        },1000)
+    </script> -->
+</body>
+</html>
